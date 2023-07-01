@@ -34,3 +34,61 @@ Para aproveitar ao máximo nossos documentos, é recomendável que você tenha u
 
 * [Reagir: documentação oficial do reação](https://react.dev/learn)
 * [React Essentials](https://nextjs.org/docs/getting-started/react-essentials)
+ 
+
+## Sumário
+* Introdução
+  * Instalação
+  * Estrutura do projeto
+  * React Essentials
+* Construindo sua aplicação
+  * Routing
+    * Defining Routes
+    * Pages and Layouts
+    * Linking and Navigating
+    * Route Groups
+    * Dynamic Routes
+    * Loading UI and Streaming
+    * Error Handling
+    * Parallel Routes
+    * Intercepting Routes
+    * Route Handlers
+    * Middleware
+    * Project Organization
+    * Internationalization
+  * Rendering
+    * Static and Dynamic
+    * Edge and Node.js Runtimes
+  * Data Fetching
+    * Fetching
+    * Caching
+    * Revalidating
+    * Server Actions
+  * Styling
+    * CSS Modules
+    * Tailwind CSS
+    * CSS-in-JS
+    * Sass
+  * Optimizing
+    * Images
+    * Fonts
+    * Scripts
+    * Metadata
+    * Static Assets
+    * Lazy Loading
+    * Analytics
+    * OpenTelemetry
+    * Instrumentation
+  * Configuring
+    * TypeScript
+    * ESLint
+    * Environment Variables
+    * Absolute Imports and Module Path Aliases
+    * MDX
+    * src Directory
+    * Draft Mode
+  * Deploying
+    * Static Exports
+  * Upgrading
+    * Codemods
+    * App Router Migration
