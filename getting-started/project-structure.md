@@ -156,3 +156,243 @@ Esta página fornece uma visão geral da estrutura de arquivos e pastas de um pr
     <td>Segmento de rota aninhado</td>
   </tr>
 </table>
+
+#### Rotas dinâmicas
+<table>
+	<tr>
+		<td>[folder]</td>
+		<td>Segmento de rota dinâmica</td>
+	</tr>
+	<tr>
+		<td>[...folder]</td>
+		<td>Segmentos catch-all</td>
+	</tr>
+	<tr>
+		<td>[[...folder]]</td>
+		<td>Segmentos de captura opcionais</td>
+	</tr>
+</table>
+	
+#### Grupos de rotas e pastas particulares
+<table>
+	<tr>
+		<td>(folder)</td>
+		<td>Agrupe rotas sem afetar o roteamento</td>
+	</tr>
+	<tr>
+		<td>_folder</td>
+		<td>Opte a pasta e todos os segmentos filhos fora do roteamento</td>
+	</tr>
+</table>
+	
+#### Rotas paralelas e interceptadas
+
+<table>
+	<tr>
+		<td>@folder</td>
+		<td>Slot nomeado</td>
+	</tr>
+	<tr>
+		<td>(.)folder</td>
+		<td>Interceptar o mesmo nível</td>
+	</tr>
+	<tr>
+		<td>(..)folder</td>
+		<td>Interceptar um nível acima</td>
+	</tr>
+	<tr>
+		<td>(..)(..)folder</td>
+		<td>Intercepte dois níveis acima</td>
+	</tr>
+	<tr>
+		<td>(...)folder</td>
+		<td>Interceptar da raiz</td>
+	</tr>
+</table>
+	
+#### Convenções de arquivos de metadados
+
+**Ícones de aplicativos**
+<table>
+	<tr>
+		<td>favicon</td>
+		<td>.ico</td>
+		<td>Arquivo Favicon</td>
+	</tr>
+	<tr>
+		<td>icon</td>
+		<td>.ico .jpg .jpeg .png .svg</td>
+		<td>Arquivo de ícone do aplicativo</td>
+	</tr>
+	<tr>
+		<td>icon</td>
+		<td>.js .ts .tsx</td>
+		<td>Ícone de aplicativo gerado</td>
+	</tr>
+	<tr>
+		<td>apple-icon</td>
+		<td>.jpg .jpeg, .png</td>
+		<td>Arquivo de ícone do aplicativo Apple</td>
+	</tr>
+	<tr>
+		<td>apple-icon</td>
+		<td>.js .ts .tsx</td>
+		<td>Ícone de aplicativo Apple gerado</td>
+	</tr>
+</table>
+		
+**Imagens abertas de gráficos e Twitter**
+<table>
+	<tr>
+		<td>opengraph-image</td>
+		<td>.jpg .jpeg .png .gif</td>
+		<td>Abrir arquivo de imagem de gráfico</td>
+	</tr>
+	<tr>
+		<td>opengraph-image</td>
+		<td>.js .ts .tsx</td>
+		<td>Imagem gerada de gráfico aberto</td>
+	</tr>
+	<tr>
+		<td>twitter-image</td>
+		<td>.jpg .jpeg .png .gif</td>
+		<td>Arquivo de imagem do Twitter</td>
+	</tr>
+	<tr>
+		<td>twitter-image</td>
+		<td>.js .ts .tsx</td>
+		<td>Imagem gerada do Twitter</td>
+	</tr>
+</table>
+
+**SEO**
+
+<table>
+	<tr>
+		<td>sitemap</td>
+		<td>.xml</td>
+		<td>Arquivo de mapa do site</td>
+	</tr>
+	<tr>
+		<td>sitemap</td>
+		<td>.js .ts</td>
+		<td>Mapa do site gerado</td>
+	</tr>
+	<tr>
+		<td>robots</td>
+		<td>.txt</td>
+		<td>Arquivo de robôs</td>
+	</tr>
+	<tr>
+		<td>robots</td>
+		<td>.js .ts</td>
+		<td>Arquivo de robôs gerados</td>
+	</tr>
+</table>
+		
+### Convenções de roteamento para `pages`
+
+#### Arquivos especiais
+
+<table>
+	<tr>
+		<td>_app</td>
+		<td>.js .jsx .tsx</td>
+		<td>Aplicativo personalizado</td>
+	</tr>
+	<tr>
+		<td>_document</td>
+		<td>.js .jsx .tsx</td>
+		<td>Documento personalizado</td>
+	</tr>
+	<tr>
+		<td>_error</td>
+		<td>.js .jsx .tsx</td>
+		<td>Página de erro personalizada</td>
+	</tr>
+	<tr>
+		<td>404</td>
+		<td>.js .jsx .tsx</td>
+		<td>404 Página de erro</td>
+	</tr>
+	<tr>
+		<td>500</td>
+		<td>.js .jsx .tsx</td>
+		<td>500 Página de erro</td>
+	</tr>
+</table>
+
+### Rotas
+
+#### Convenção de pasta		
+
+<table>
+	<tr>
+		<td>index</td>
+		<td>.js .jsx .tsx</td>
+		<td>Página inicial</td>
+	</tr>
+	<tr>
+		<td>folder/index</td>
+		<td>.js .jsx .tsx</td>
+		<td>Página aninhada</td>
+	</tr>
+</table>
+
+#### Convenção de arquivo
+
+<table>
+	<tr>
+		<td>index</td>
+		<td>.js .jsx .tsx</td>
+		<td>Página inicial</td>
+	</tr>
+	<tr>
+		<td>file</td>
+		<td>.js .jsx .tsx</td>
+		<td>Página aninhada</td>
+	</tr>
+</table>
+
+  
+### Rotas dinâmicas
+
+#### Convenção de pasta
+
+<table>
+	<tr>
+		<td>[folder]/index</td>
+		<td>.js .jsx .tsx</td>
+		<td>Segmento de rota dinâmica</td>
+	</tr>
+	<tr>
+		<td>[...folder]/index</td>
+		<td>.js .jsx .tsx</td>
+		<td>Segmentos catch-all</td>
+	</tr>
+	<tr>
+		<td>[[...folder]]/index</td>
+		<td>.js .jsx .tsx</td>
+		<td>Segmentos de captura opcionais</td>
+	</tr>
+</table>
+
+#### Convenção de arquivo
+
+<table>
+	<tr>
+		<td>[file]</td>
+		<td>.js .jsx .tsx</td>
+		<td>Segmento de rota dinâmica</td>
+	</tr>
+	<tr>
+		<td>[...file]</td>
+		<td>.js .jsx .tsx</td>
+		<td>Segmentos catch-all</td>
+	</tr>
+	<tr>
+		<td>[[...file]]</td>
+		<td>.js .jsx .tsx</td>
+		<td>Segmentos de captura opcionais</td>
+	</tr>
+</table>
