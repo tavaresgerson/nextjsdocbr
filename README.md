@@ -38,8 +38,8 @@ Para aproveitar ao máximo nossos documentos, é recomendável que você tenha u
 
 ## Sumário
 * Introdução
-  * Instalação
-  * Estrutura do projeto
+  * [Instalação](/getting-started/installation.md)
+  * [Estrutura do projeto](/getting-started/project-structure.md)
   * React Essentials
 * Construindo sua aplicação
   * Routing
