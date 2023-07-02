@@ -4,397 +4,158 @@ Esta página fornece uma visão geral da estrutura de arquivos e pastas de um pr
 
 ### Arquivos de nível superior
 
-<table>
-  <tr>
-    <td colspan="2">
-      <strong>Next.js</strong>
-    </td>
-  </tr>
-  <tr>
-    <td>
-		[next.config.js](https://nextjs.org/docs/app/api-reference/next-config-js)
-	</td>
-    <td>Arquivo de configuração para Next.js</td>
-  </tr>
-  <tr>
-    <td>
-      [middleware.ts](https://nextjs.org/docs/app/building-your-application/routing/middleware)
-    </td>
-    <td>
-      Next.js solicita os middlewares
-    </td>
-  </tr>
-  <tr>
-    <td>[instrumentation.ts](https://nextjs.org/docs/app/building-your-application/optimizing/instrumentation)</td>
-    <td>Telemetria e Instrumentações</td>
-  </tr>
-  <tr>
-    <td>[.env](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables)</td>
-    <td>Variáveis de ambiente</td>
-  </tr>
-  <tr>
-    <td>[.env.local](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables)</td>
-    <td>Variáveis de ambiente local</td>
-  </tr>
-  <tr>
-    <td>[.env.production](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables)</td>
-    <td>Variáveis do ambiente de produção</td>
-  </tr>
-  <tr>
-    <td>[.env.development](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables)</td>
-    <td>Variáveis do ambiente de desenvolvimento</td>
-  </tr>
-  <tr>
-    <td>.next-env.d.ts</td>
-    <td>Arquivo de declaração TypeScript para Next.js</td>
-  </tr>
-  <tr>
-    <td colspan="2">Ecossistema</td>
-  </tr>
-  <tr>
-    <td>[package.json](https://nextjs.org/docs/getting-started/installation#manual-installation)</td>
-    <td>Dependências e scripts do projeto</td>
-  </tr>
-  <tr>
-    <td>.gitignore</td>
-    <td>Git arquivos e pastas para ignorar</td>
-  </tr>
-  <tr>
-    <td>tsconfig.json</td>
-    <td>Arquivo de configuração para TypeScript</td>
-  </tr>
-  <tr>
-    <td>jsconfig.json</td>
-    <td>Arquivo de configuração para JavaScript</td>
-  </tr>
-  <tr>
-    <td>[.eslintrc.json](https://nextjs.org/docs/app/building-your-application/configuring/eslint)</td>
-    <td>Arquivo de configuração para ESLint</td>
-  </tr>
-</table>
+**Next.js**
+|   	   									|								|
+|-------------------------------------------------------------------------------|---------------------------------------------------------------|
+| [next.config.js](https://nextjs.org/docs/app/api-reference/next-config-js)	| Arquivo de configuração para Next.js				|
+| [middleware.ts](https://nextjs.org/docs/app/building-your-application/routing/middleware)  | Next.js solicita os middlewares			|
+| [instrumentation.ts](https://nextjs.org/docs/app/building-your-application/optimizing/instrumentation) | Telemetria e Instrumentações		|
+| [.env](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables)	| Variáveis de ambiente			|
+| [.env.local](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables) | Variáveis de ambiente local		|
+| [.env.production](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables) | Variáveis do ambiente de produção |
+| [.env.development](https://nextjs.org/docs/app/building-your-application/configuring/environment-variables) | Variáveis do ambiente de desenvolvimento |
+| .next-env.d.ts											| Arquivo de declaração TypeScript para Next.js |
+
+**Ecossistema**
+
+|   	   									|								|
+|-------------------------------------------------------------------------------|---------------------------------------------------------------|
+| [package.json](https://nextjs.org/docs/getting-started/installation#manual-installation)	| Dependências e scripts do projeto		|
+| .gitignore									| Git arquivos e pastas para ignorar				|
+| tsconfig.json									| Arquivo de configuração para TypeScript			|
+| jsconfig.json									| Arquivo de configuração para JavaScript			|
+| [.eslintrc.json](https://nextjs.org/docs/app/building-your-application/configuring/eslint)	| Arquivo de configuração para ESLint		|
+
+
 	
 ### Pastas de nível superior
 
-<table>
-  <tr>
-    <td>[app](https://nextjs.org/docs/app/building-your-application/routing)</td>
-    <td>Roteador de aplicativos</td>
-  </tr>
-  <tr>
-    <td>[pages](https://nextjs.org/docs/pages/building-your-application/routing)</td>
-    <td>Roteador de páginas</td>
-  </tr>
-  <tr>
-    <td>[public](https://nextjs.org/docs/getting-started/installation#create-the-public-folder)</td>
-    <td>Ativos estáticos a serem atendidos</td>
-  </tr>
-  <tr>
-    <td>[src](https://nextjs.org/docs/app/building-your-application/configuring/src-directory)</td>
-    <td>Pasta de origem do aplicativo opcional</td>
-  </tr>
-</table>
+|   	   									|								|
+|-------------------------------------------------------------------------------|---------------------------------------------------------------|
+| [app](https://nextjs.org/docs/app/building-your-application/routing)		| Roteador de aplicativos					|
+| [pages](https://nextjs.org/docs/pages/building-your-application/routing)	| Roteador de páginas						|
+| [public](https://nextjs.org/docs/getting-started/installation#create-the-public-folder) | Ativos estáticos a serem atendidos			|
+| [src](https://nextjs.org/docs/app/building-your-application/configuring/src-directory)  | Pasta de origem do aplicativo opcional		|
+
 
 ### Convenções de roteamento do `app` 
 
 #### Arquivos de roteamento
 
-<table>
-  <tr>
-    <td>[layout](https://nextjs.org/docs/app/api-reference/file-conventions/layout)</td>
-    <td>.js .jsx .tsx</td>
-    <td>Layout</td>
-  </tr>
-  <tr>
-    <td>[page](https://nextjs.org/docs/app/api-reference/file-conventions/page)</td>
-    <td>.js .jsx .tsx</td>
-    <td>Página</td
-  </tr>
-  <tr>
-    <td>[loading](https://nextjs.org/docs/app/api-reference/file-conventions/loading)</td>
-    <td>.js .jsx .tsx</td>
-    <td>Carregando UI</td>
-  </tr>
-  <tr>
-    <td>[not-found](https://nextjs.org/docs/app/api-reference/file-conventions/not-found)</td>
-    <td>.js .jsx .tsx</td>
-    <td>UI não encontrada</td>
-  </tr>
-  <tr>
-    <td>[error](https://nextjs.org/docs/app/api-reference/file-conventions/error)</td>
-    <td>.js .jsx .tsx</td>
-    <td>Erro na interface do usuário</td>
-  </tr>
-  <tr>
-    <td>[global-error](https://nextjs.org/docs/app/api-reference/file-conventions/error#global-errorjs)</td>
-    <td>.js .jsx .tsx</td>
-    <td>UI de erro global</td>
-  </tr>
-  <tr>
-    <td>[route](https://nextjs.org/docs/app/api-reference/file-conventions/route)</td>
-    <td>.js .ts</td>
-    <td>Endpoint da API</td>
-  </tr>
-  <tr>
-    <td>[template](https://nextjs.org/docs/app/api-reference/file-conventions/template)</td>
-    <td>.js .jsx .tsx</td>
-    <td>layout</td>
-  </tr>
-  <tr>
-    <td>[default](https://nextjs.org/docs/app/api-reference/file-conventions/default)</td>
-    <td>.js .jsx .tsx</td>
-    <td>Página de fallback da rota paralela</td>
-  </tr>
-</table>
+|   	   									|			|					|
+|-------------------------------------------------------------------------------|-----------------------|---------------------------------------|
+| [layout](https://nextjs.org/docs/app/api-reference/file-conventions/layout)	| .js .jsx .tsx		| Layout				|
+| [page](https://nextjs.org/docs/app/api-reference/file-conventions/page)	| .js .jsx .tsx		| Página				|
+| [loading](https://nextjs.org/docs/app/api-reference/file-conventions/loading) | .js .jsx .tsx		| Carregando UI				|
+| [not-found](https://nextjs.org/docs/app/api-reference/file-conventions/not-found) | .js .jsx .tsx	| UI para rota não encontrada		|
+| [error](https://nextjs.org/docs/app/api-reference/file-conventions/error)	| .js .jsx .tsx		| Erro na interface do usuário		|
+| [global-error](https://nextjs.org/docs/app/api-reference/file-conventions/error#global-errorjs) | .js .jsx .tsx | UI de erro global		|
+| [route](https://nextjs.org/docs/app/api-reference/file-conventions/route)	| .js .ts		| Endpoint da API			|
+| [template](https://nextjs.org/docs/app/api-reference/file-conventions/template) | .js .jsx .tsx	| layout				|
+| [default](https://nextjs.org/docs/app/api-reference/file-conventions/default) | .js .jsx .tsx		| Página de fallback da rota paralela	|
 
 #### Rotas aninhadas
-
-<table>
-  <tr>
-    <td>[folder](https://nextjs.org/docs/app/building-your-application/routing#route-segments)</td>
-    <td>Segmento de rota</td>
-  </tr>
-  <tr>
-    <td>[folder/folder](https://nextjs.org/docs/app/building-your-application/routing#nested-routes)</td>
-    <td>Segmento de rota aninhado</td>
-  </tr>
-</table>
+|											 |							|
+|----------------------------------------------------------------------------------------|------------------------------------------------------|
+| [folder](https://nextjs.org/docs/app/building-your-application/routing#route-segments) | Segmento de rota					|
+| [folder/folder](https://nextjs.org/docs/app/building-your-application/routing#nested-routes) | Segmento de rota aninhado			|
 
 #### Rotas dinâmicas
-<table>
-	<tr>
-		<td>[[folder]](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#convention)</td>
-		<td>Segmento de rota dinâmica</td>
-	</tr>
-	<tr>
-		<td>[[...folder]](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes)</td>
-		<td>Segmentos catch-all</td>
-	</tr>
-	<tr>
-		<td>[[[...folder]]](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#optional-catch-all-segments)</td>
-		<td>Segmentos de captura opcionais</td>
-	</tr>
-</table>
-	
+
+| Link                                                        | Descrição                |
+| ----------------------------------------------------------- | ------------------------ |
+| [[folder]](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#convention) | Segmento de rota dinâmica |
+| [[...folder]](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes) | Segmentos catch-all       |
+| [[[...folder]]](https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes#optional-catch-all-segments) | Segmentos de captura opcionais |
+
+
 #### Grupos de rotas e pastas particulares
-<table>
-	<tr>
-		<td>[(folder)](https://nextjs.org/docs/app/building-your-application/routing/route-groups#convention)</td>
-		<td>Agrupe rotas sem afetar o roteamento</td>
-	</tr>
-	<tr>
-		<td>[_folder](https://nextjs.org/docs/app/building-your-application/routing/colocation#private-folders)</td>
-		<td>Opte a pasta e todos os segmentos filhos fora do roteamento</td>
-	</tr>
-</table>
+| Link                                                                                               | Descrição                                                     |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [(folder)](https://nextjs.org/docs/app/building-your-application/routing/route-groups#convention)  | Agrupe rotas sem afetar o roteamento                          |
+| [_folder](https://nextjs.org/docs/app/building-your-application/routing/colocation#private-folders) | Opte a pasta e todos os segmentos filhos fora do roteamento    |
 	
 #### Rotas paralelas e interceptadas
 
-<table>
-	<tr>
-		<td>[@folder](https://nextjs.org/docs/app/building-your-application/routing/parallel-routes#convention)</td>
-		<td>Slot nomeado</td>
-	</tr>
-	<tr>
-		<td>[(.)folder](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes#convention)</td>
-		<td>Interceptar o mesmo nível</td>
-	</tr>
-	<tr>
-		<td>[(..)folder](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes#convention)</td>
-		<td>Interceptar um nível acima</td>
-	</tr>
-	<tr>
-		<td>[(..)(..)folder](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes#convention)</td>
-		<td>Intercepte dois níveis acima</td>
-	</tr>
-	<tr>
-		<td>[(...)folder](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes#convention)</td>
-		<td>Interceptar da raiz</td>
-	</tr>
-</table>
+| Link                                                                                                         | Descrição                |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------ |
+| [@folder](https://nextjs.org/docs/app/building-your-application/routing/parallel-routes#convention)           | Slot nomeado             |
+| [(.)folder](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes#convention)     | Interceptar o mesmo nível |
+| [(..)folder](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes#convention)    | Interceptar um nível acima |
+| [(..)(..)folder](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes#convention) | Intercepte dois níveis acima |
+| [(...)folder](https://nextjs.org/docs/app/building-your-application/routing/intercepting-routes#convention)   | Interceptar da raiz      |
 	
 #### Convenções de arquivos de metadados
 
 **Ícones de aplicativos**
-<table>
-	<tr>
-		<td>[favicon](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#favicon)</td>
-		<td>.ico</td>
-		<td>Arquivo Favicon</td>
-	</tr>
-	<tr>
-		<td>[icon](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#icon)</td>
-		<td>.ico .jpg .jpeg .png .svg</td>
-		<td>Arquivo de ícone do aplicativo</td>
-	</tr>
-	<tr>
-		<td>[icon](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#generate-icons-using-code-js-ts-tsx)</td>
-		<td>.js .ts .tsx</td>
-		<td>Ícone de aplicativo gerado</td>
-	</tr>
-	<tr>
-		<td>[apple-icon](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#apple-icon)</td>
-		<td>.jpg .jpeg, .png</td>
-		<td>Arquivo de ícone do aplicativo Apple</td>
-	</tr>
-	<tr>
-		<td>[apple-icon](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#generate-icons-using-code-js-ts-tsx)</td>
-		<td>.js .ts .tsx</td>
-		<td>Ícone de aplicativo Apple gerado</td>
-	</tr>
-</table>
+| Link                                                                                                                                            | Extensões                 | Descrição                          |
+| ----------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ---------------------------------- |
+| [favicon](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#favicon)                                                | .ico                      | Arquivo Favicon                     |
+| [icon](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#icon)                                                      | .ico .jpg .jpeg .png .svg | Arquivo de ícone do aplicativo      |
+| [icon](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#generate-icons-using-code-js-ts-tsx)                        | .js .ts .tsx              | Ícone de aplicativo gerado          |
+| [apple-icon](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#apple-icon)                                          | .jpg .jpeg, .png          | Arquivo de ícone do aplicativo Apple |
+| [apple-icon](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/app-icons#generate-icons-using-code-js-ts-tsx)                  | .js .ts .tsx              | Ícone de aplicativo Apple gerado    |
 		
 **Imagens abertas de gráficos e Twitter**
-<table>
-	<tr>
-		<td>[opengraph-image](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#opengraph-image)</td>
-		<td>.jpg .jpeg .png .gif</td>
-		<td>Abrir arquivo de imagem de gráfico</td>
-	</tr>
-	<tr>
-		<td>[opengraph-image](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#generate-images-using-code-js-ts-tsx)</td>
-		<td>.js .ts .tsx</td>
-		<td>Imagem gerada de gráfico aberto</td>
-	</tr>
-	<tr>
-		<td>[twitter-image](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#twitter-image)</td>
-		<td>.jpg .jpeg .png .gif</td>
-		<td>Arquivo de imagem do Twitter</td>
-	</tr>
-	<tr>
-		<td>[twitter-image](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#twitter-image)</td>
-		<td>.js .ts .tsx</td>
-		<td>Imagem gerada do Twitter</td>
-	</tr>
-</table>
+| Link                                                                                                                                                    | Extensões                 | Descrição                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | -------------------------------------- |
+| [opengraph-image](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#opengraph-image)                                   | .jpg .jpeg .png .gif      | Abrir arquivo de imagem de gráfico      |
+| [opengraph-image](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#generate-images-using-code-js-ts-tsx)              | .js .ts .tsx              | Imagem gerada de gráfico aberto         |
+| [twitter-image](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#twitter-image)                                     | .jpg .jpeg .png .gif      | Arquivo de imagem do Twitter            |
+| [twitter-image](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image#twitter-image)                                     | .js .ts .tsx              | Imagem gerada do Twitter                |
 
 **SEO**
 
-<table>
-	<tr>
-		<td>[sitemap](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap#static-sitemapxml)</td>
-		<td>.xml</td>
-		<td>Arquivo de mapa do site</td>
-	</tr>
-	<tr>
-		<td>[sitemap](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap#generate-a-sitemap)</td>
-		<td>.js .ts</td>
-		<td>Mapa do site gerado</td>
-	</tr>
-	<tr>
-		<td>[robots](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots#static-robotstxt)</td>
-		<td>.txt</td>
-		<td>Arquivo de robôs</td>
-	</tr>
-	<tr>
-		<td>[robots](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots#generate-a-robots-file)</td>
-		<td>.js .ts</td>
-		<td>Arquivo de robôs gerados</td>
-	</tr>
-</table>
+| Link                                                                                                                        | Extensões        | Descrição                 |
+| --------------------------------------------------------------------------------------------------------------------------- | ---------------- | ------------------------- |
+| [sitemap](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap#static-sitemapxml)                     | .xml             | Arquivo de mapa do site    |
+| [sitemap](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap#generate-a-sitemap)                     | .js .ts          | Mapa do site gerado        |
+| [robots](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots#static-robotstxt)                         | .txt             | Arquivo de robôs           |
+| [robots](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/robots#generate-a-robots-file)                   | .js .ts          | Arquivo de robôs gerados   |
 		
 ### Convenções de roteamento para `pages`
 
 #### Arquivos especiais
 
-<table>
-	<tr>
-		<td>[_app](https://nextjs.org/docs/pages/building-your-application/routing/custom-app)</td>
-		<td>.js .jsx .tsx</td>
-		<td>Aplicativo personalizado</td>
-	</tr>
-	<tr>
-		<td>[_document](https://nextjs.org/docs/pages/building-your-application/routing/custom-document)</td>
-		<td>.js .jsx .tsx</td>
-		<td>Documento personalizado</td>
-	</tr>
-	<tr>
-		<td>[_error](https://nextjs.org/docs/pages/building-your-application/routing/custom-error#more-advanced-error-page-customizing)</td>
-		<td>.js .jsx .tsx</td>
-		<td>Página de erro personalizada</td>
-	</tr>
-	<tr>
-		<td>[404](https://nextjs.org/docs/pages/building-your-application/routing/custom-error#404-page)</td>
-		<td>.js .jsx .tsx</td>
-		<td>404 Página de erro</td>
-	</tr>
-	<tr>
-		<td>[500](https://nextjs.org/docs/pages/building-your-application/routing/custom-error#500-page)</td>
-		<td>.js .jsx .tsx</td>
-		<td>500 Página de erro</td>
-	</tr>
-</table>
+| Link                                                                                                                                             | Extensões        | Descrição                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | ----------------------------- |
+| [_app](https://nextjs.org/docs/pages/building-your-application/routing/custom-app)                                                               | .js .jsx .tsx   | Aplicativo personalizado       |
+| [_document](https://nextjs.org/docs/pages/building-your-application/routing/custom-document)                                                     | .js .jsx .tsx   | Documento personalizado        |
+| [_error](https://nextjs.org/docs/pages/building-your-application/routing/custom-error#more-advanced-error-page-customizing)                       | .js .jsx .tsx   | Página de erro personalizada   |
+| [404](https://nextjs.org/docs/pages/building-your-application/routing/custom-error#404-page)                                                     | .js .jsx .tsx   | 404 Página de erro             |
+| [500](https://nextjs.org/docs/pages/building-your-application/routing/custom-error#500-page)                                                     | .js .jsx .tsx   | 500 Página de erro             |
 
 ### Rotas
 
 #### Convenção de pasta		
 
-<table>
-	<tr>
-		<td>[index](https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#index-routes)</td>
-		<td>.js .jsx .tsx</td>
-		<td>Página inicial</td>
-	</tr>
-	<tr>
-		<td>[folder/index](https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#index-routes)</td>
-		<td>.js .jsx .tsx</td>
-		<td>Página aninhada</td>
-	</tr>
-</table>
+| Link                                                                                                                                  | Extensões        | Descrição                  |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------- |
+| [index](https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#index-routes)                                  | .js .jsx .tsx   | Página inicial             |
+| [folder/index](https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#index-routes)                          | .js .jsx .tsx   | Página aninhada            |
 
 #### Convenção de arquivo
 
-<table>
-	<tr>
-		<td>[index](https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#index-routes)</td>
-		<td>.js .jsx .tsx</td>
-		<td>Página inicial</td>
-	</tr>
-	<tr>
-		<td>[file](https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts)</td>
-		<td>.js .jsx .tsx</td>
-		<td>Página aninhada</td>
-	</tr>
-</table>
+| Link                                                                                                                                  | Extensões        | Descrição                  |
+| ------------------------------------------------------------------------------------------------------------------------------------- | ---------------- | -------------------------- |
+| [index](https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#index-routes)                               | .js .jsx .tsx   | Página inicial             |
+| [file](https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts)                                             | .js .jsx .tsx   | Página aninhada            |
 
   
 ### Rotas dinâmicas
 
 #### Convenção de pasta
 
-<table>
-	<tr>
-		<td>[[folder]/index](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes)</td>
-		<td>.js .jsx .tsx</td>
-		<td>Segmento de rota dinâmica</td>
-	</tr>
-	<tr>
-		<td>[[...folder]/index](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#catch-all-segments)</td>
-		<td>.js .jsx .tsx</td>
-		<td>Segmentos catch-all</td>
-	</tr>
-	<tr>
-		<td>[[[...folder]]/index](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#optional-catch-all-segments)</td>
-		<td>.js .jsx .tsx</td>
-		<td>Segmentos de captura opcionais</td>
-	</tr>
-</table>
+| Link                                                                                                                                                    | Extensões                 | Descrição                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | -------------------------------------- |
+| [[folder]/index](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes)                                                         | .js .jsx .tsx             | Segmento de rota dinâmica              |
+| [[...folder]/index](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#catch-all-segments)                                    | .js .jsx .tsx             | Segmentos catch-all                     |
+| [[[...folder]]/index](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#optional-catch-all-segments)                        | .js .jsx .tsx             | Segmentos de captura opcionais          |
 
 #### Convenção de arquivo
 
-<table>
-	<tr>
-		<td>[[file]](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes)</td>
-		<td>.js .jsx .tsx</td>
-		<td>Segmento de rota dinâmica</td>
-	</tr>
-	<tr>
-		<td>[[...file](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#catch-all-segments)]</td>
-		<td>.js .jsx .tsx</td>
-		<td>Segmentos catch-all</td>
-	</tr>
-	<tr>
-		<td>[[[...file]]](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#optional-catch-all-segments)https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#optional-catch-all-segments</td>
-		<td>.js .jsx .tsx</td>
-		<td>Segmentos de captura opcionais</td>
-	</tr>
-</table>
+| Link                                                                                                                        | Extensões                 | Descrição                              |
+| --------------------------------------------------------------------------------------------------------------------------- | ------------------------- | -------------------------------------- |
+| [[file]](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes)                                    | .js .jsx .tsx             | Segmento de rota dinâmica              |
+| [[...file](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#catch-all-segments)]              | .js .jsx .tsx             | Segmentos catch-all                    |
+| [[[...file]]](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes#optional-catch-all-segments)   | .js .jsx .tsx             | Segmentos de captura opcionais         |
