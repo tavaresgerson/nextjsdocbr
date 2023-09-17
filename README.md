@@ -41,7 +41,7 @@ Para aproveitar ao máximo nossos documentos, é recomendável que você tenha u
   * [Instalação](/getting-started/installation.md)
   * [Estrutura do projeto](/getting-started/project-structure.md)
   * React Essentials
-* Construindo sua aplicação
+* Construindo sua aplicação usando App Router
   * Routing
     * Defining Routes
     * Pages and Layouts
