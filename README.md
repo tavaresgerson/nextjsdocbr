@@ -25,7 +25,7 @@ Alguns dos principais recursos do Next.js incluem:
 ### Como usar esses documentos
 As seções e páginas dos documentos são organizadas sequencialmente, do básico ao avançado, para que você possa segui-las passo a passo ao criar seu aplicativo Next.js. No entanto, você pode lê-los em qualquer ordem ou pular para as páginas que se aplicam ao seu caso de uso.
 
-Para começar, faça o checkout da [Instalação](https://nextjs.org/docs/getting-started/installation). Se você é novo em React or Server Components, recomendamos a leitura da página [React Essentials](https://nextjs.org/docs/getting-started/react-essentials).
+Para começar, faça o checkout da [Instalação](/docs/getting-started/installation.md). Se você é novo em React or Server Components, recomendamos a leitura da página [React Essentials](/docs/getting-started/react-essentials.md).
 
 ### Conhecimento necessários
 Embora nossos documentos sejam projetados para serem amigáveis ao iniciante, precisamos estabelecer uma linha de base para que os documentos possam manter o foco na funcionalidade Next.js. Garantiremos links para a documentação relevante sempre que introduzirmos um novo conceito.
@@ -33,18 +33,18 @@ Embora nossos documentos sejam projetados para serem amigáveis ao iniciante, pr
 Para aproveitar ao máximo nossos documentos, é recomendável que você tenha um entendimento básico de HTML, CSS e React. Se você precisar aprimorar suas habilidades do React, confira estes recursos:
 
 * [Reagir: documentação oficial do reação](https://react.dev/learn)
-* [React Essentials](https://nextjs.org/docs/getting-started/react-essentials)
+* [React Essentials](/docs/getting-started/react-essentials.md)
  
 
 ## Sumário
 * Introdução
-  * [Instalação](/getting-started/installation.md)
-  * [Estrutura do projeto](/getting-started/project-structure.md)
-  * React Essentials
+  * [Instalação](/docs/getting-started/installation.md)
+  * [Estrutura do projeto](/docs/getting-started/project-structure.md)
+  * [React Essentials](/docs/getting-started/react-essentials.md)
 * [Construindo sua aplicação usando App Router](/docs/app/building-your-application/building-your-application.md)
   * [Roteamento](/docs/app/building-your-application/routing.md)
     * Defining Routes
-    * Pages and Layouts
+    * [Páginas e Layouts](/docs/app/building-your-application/routing/pages-and-layouts.md)
     * Linking and Navigating
     * Route Groups
     * Dynamic Routes
