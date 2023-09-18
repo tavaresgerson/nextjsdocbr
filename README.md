@@ -43,7 +43,7 @@ Para aproveitar ao máximo nossos documentos, é recomendável que você tenha u
   * [React Essentials](/docs/getting-started/react-essentials.md)
 * [Construindo sua aplicação usando App Router](/docs/app/building-your-application/building-your-application.md)
   * [Roteamento](/docs/app/building-your-application/routing.md)
-    * Defining Routes
+    * [Definindo Rotas](/docs/app/building-your-application/routing/defining-routes.md)
     * [Páginas e Layouts](/docs/app/building-your-application/routing/pages-and-layouts.md)
     * Linking and Navigating
     * Route Groups
