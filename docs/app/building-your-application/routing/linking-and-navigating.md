@@ -4,7 +4,7 @@ Existem duas maneiras de navegar entre rotas no Next.js:
 
 * Usando o Componente `<Link>`
 * Usando o hook `useRouter`
-* 
+
 Esta página abordará como usar `<Link>`, `useRouter()` e mergulhar mais fundo em como a navegação funciona.
 
 ## Componente `<Link>`
