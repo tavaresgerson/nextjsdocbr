@@ -46,7 +46,7 @@ Para aproveitar ao máximo nossos documentos, é recomendável que você tenha u
     * [Definindo Rotas](/docs/app/building-your-application/routing/defining-routes.md)
     * [Páginas e Layouts](/docs/app/building-your-application/routing/pages-and-layouts.md)
     * [Ligação e Navegação](/docs/app/building-your-application/routing/linking-and-navigating.md)
-    * Route Groups
+    * [Grupos de rotas](/docs/app/building-your-application/routing/route-groups.md)
     * Dynamic Routes
     * Loading UI and Streaming
     * Error Handling
