@@ -49,7 +49,7 @@ Para aproveitar ao máximo nossos documentos, é recomendável que você tenha u
     * [Grupos de rotas](/docs/app/building-your-application/routing/route-groups.md)
     * [Rotas Dinâmicas](/docs/app/building-your-application/routing/dynamic-routes.md)
     * [Carregando UI e Streaming](/docs/app/building-your-application/routing/loading-ui-and-streaming.md)
-    * Error Handling
+    * [Manipulação de erros](/docs/app/building-your-application/routing/error-handling.md)
     * Parallel Routes
     * Intercepting Routes
     * Route Handlers
