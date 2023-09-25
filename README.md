@@ -50,8 +50,8 @@ Para aproveitar ao máximo nossos documentos, é recomendável que você tenha u
     * [Rotas Dinâmicas](/docs/app/building-your-application/routing/dynamic-routes.md)
     * [Carregando UI e Streaming](/docs/app/building-your-application/routing/loading-ui-and-streaming.md)
     * [Manipulação de erros](/docs/app/building-your-application/routing/error-handling.md)
-    * Parallel Routes
-    * Intercepting Routes
+    * [Rotas Paralelas](/docs/app/building-your-application/routing/parallel-routes.md)
+    * [Interceptando Rotas](/docs/app/building-your-application/routing/intercepting-routes.md)
     * Route Handlers
     * Middleware
     * Project Organization
