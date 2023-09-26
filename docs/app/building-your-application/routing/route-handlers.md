@@ -216,3 +216,246 @@ export async function GET(request: Request) {
 ```
 
 Como alternativa, você pode usar abstrações sobre as APIs da Web subjacentes para ler cabeçalhos ([`NextRequest`](/docs/app/api-reference/functions/next-request.md)):
+
+```ts
+// app/api/route.ts
+
+import { type NextRequest } from 'next/server'
+ 
+export async function GET(request: NextRequest) {
+  const requestHeaders = new Headers(request.headers)
+}
+```
+
+#### Redirects
+
+```ts
+// app/api/route.ts
+
+import { redirect } from 'next/navigation'
+ 
+export async function GET(request: Request) {
+  redirect('https://nextjs.org/')
+}
+```
+
+### Segmentos de rota dinâmica
+
+> Recomendamos a leitura da página [Definindo Rotas](/docs/app/building-your-application/routing/defining-routes.md) antes de continuar.
+
+Os manipuladores de rota podem usar [segmentos dinâmicos](/docs/app/building-your-application/routing/dynamic-routes.md) para criar manipuladores de solicitação a partir de dados dinâmicos.
+
+```ts
+// app/items/[slug]/route.ts
+
+export async function GET(
+  request: Request,
+  { params }: { params: { slug: string } }
+) {
+  const slug = params.slug // 'a', 'b', or 'c'
+}
+```
+
+
+| Rota                        |	Exemplo de URL     | params          |
+|-----------------------------|--------------------|-----------------|
+| `app/items/[slug]/route.js` |	`/items/a`         | `{ slug: 'a' }` |
+| `app/items/[slug]/route.js` |	`/items/b`         | `{ slug: 'b' }` |
+| `app/items/[slug]/route.js` | `/items/c`         | `{ slug: 'c' }` |
+
+## Parâmetros de consulta de URL
+O objeto de solicitação passado para o Route Handler é uma instância `NextRequest`, que possui alguns [métodos adicionais de conveniência](/docs/app/api-reference/functions/next-request.md), inclusive para manipulação mais fácil de parâmetros de consulta.
+
+```ts
+// app/api/search/route.ts
+
+import { type NextRequest } from 'next/server'
+ 
+export function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams
+  const query = searchParams.get('query')
+  // a consulta é "hello" para /api/search?query=hello
+}
+```
+
+## Streaming
+O streaming é comumente usado em combinação com Large Language Models (LLMs), como OpenAI, para conteúdo gerado por IA. Saiba mais sobre o [SDK de IA](https://sdk.vercel.ai/docs).
+
+```ts
+// app/api/chat/route.ts
+
+import { Configuration, OpenAIApi } from 'openai-edge'
+import { OpenAIStream, StreamingTextResponse } from 'ai'
+ 
+export const runtime = 'edge'
+ 
+const apiConfig = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY!,
+})
+ 
+const openai = new OpenAIApi(apiConfig)
+ 
+export async function POST(req: Request) {
+  // Extraia as `mensagens` do corpo da solicitação
+  const { messages } = await req.json()
+ 
+  // Solicite a API OpenAI para a resposta com base no prompt
+  const response = await openai.createChatCompletion({
+    model: 'gpt-3.5-turbo',
+    stream: true,
+    messages: messages,
+    max_tokens: 500,
+    temperature: 0.7,
+    top_p: 1,
+    frequency_penalty: 1,
+    presence_penalty: 1,
+  })
+ 
+  // Converta a resposta em um fluxo de texto amigável
+  const stream = OpenAIStream(response)
+ 
+  // Responda com o stream
+  return new StreamingTextResponse(stream)
+}
+```
+
+Essas abstrações usam APIs da Web para criar um fluxo. Você também pode usar as APIs Web subjacentes diretamente.
+
+```ts
+// app/api/route.ts
+
+// https://developer.mozilla.org/docs/Web/API/ReadableStream#convert_async_iterator_to_stream
+function iteratorToStream(iterator: any) {
+  return new ReadableStream({
+    async pull(controller) {
+      const { value, done } = await iterator.next()
+ 
+      if (done) {
+        controller.close()
+      } else {
+        controller.enqueue(value)
+      }
+    },
+  })
+}
+ 
+function sleep(time: number) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time)
+  })
+}
+ 
+const encoder = new TextEncoder()
+ 
+async function* makeIterator() {
+  yield encoder.encode('<p>One</p>')
+  await sleep(200)
+  yield encoder.encode('<p>Two</p>')
+  await sleep(200)
+  yield encoder.encode('<p>Three</p>')
+}
+ 
+export async function GET() {
+  const iterator = makeIterator()
+  const stream = iteratorToStream(iterator)
+ 
+  return new Response(stream)
+}
+```
+
+## Corpo da Solicitação
+Você pode ler o corpo da solicitação usando os métodos padrão da API Web:
+
+```ts
+// app/items/route.ts
+
+import { NextResponse } from 'next/server'
+ 
+export async function POST(request: Request) {
+  const res = await request.json()
+  return NextResponse.json({ res })
+}
+```
+
+## Solicitar Corpo de FormData
+Você pode ler o `FormData` usando a função `request.formData()`:
+
+```ts
+// app/items/route.ts
+
+import { NextResponse } from 'next/server'
+ 
+export async function POST(request: Request) {
+  const formData = await request.formData()
+  const name = formData.get('name')
+  const email = formData.get('email')
+  return NextResponse.json({ name, email })
+}
+```
+
+Como os dados `formData` são todos strings, você pode usar [zod-form-data](https://www.npmjs.com/zod-form-data) para validar a solicitação e recuperar os dados no formato de sua preferência (por exemplo, `number`).
+
+## CORS
+Você pode definir cabeçalhos CORS em uma `Response` usando os métodos padrão da API Web:
+
+```ts
+// app/api/route.ts
+
+export async function GET(request: Request) {
+  return new Response('Hello, Next.js!', {
+    status: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    },
+  })
+}
+```
+
+## Tempos de execução Edge e Node.js
+Os manipuladores de rota têm uma API da Web isomórfica para oferecer suporte a tempos de execução Edge e Node.js perfeitamente, incluindo suporte para streaming. Como os Route Handlers usam a mesma configuração de [segmento de rota](/docs/app/api-reference/file-conventions/route-segment-config.md) que as páginas e os layouts, eles oferecem suporte a recursos há muito esperados, como Route Handlers de uso geral [regenerados estaticamente](/docs/app/building-your-application/data-fetching/fetching-caching-and-revalidating.md).
+
+Você pode usar a opção de configuração do segmento de tempo de execução para especificar o tempo de execução:
+
+```ts
+export const runtime = 'edge' // 'nodejs' é o padrão
+```
+
+## Respostas não UI
+Você pode usar manipuladores de rota para retornar conteúdo que não seja da UI. Observe que [`sitemap.xml`](/docs/app/api-reference/file-conventions/metadata/sitemap.md), [`robots.txt`](/docs/app/api-reference/file-conventions/metadata/robots.md), [ícones de aplicativos](/docs/app/api-reference/file-conventions/metadata/app-icons.md) e [opengraph](/docs/app/api-reference/file-conventions/metadata/opengraph-image.md) têm suporte integrado.
+
+```ts
+app/rss.xml/route.ts
+
+TypeScript
+
+export async function GET() {
+  return new Response(`<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+ 
+<channel>
+  <title>Next.js Documentation</title>
+  <link>https://nextjs.org/docs</link>
+  <description>The React Framework for the Web</description>
+</channel>
+ 
+</rss>`)
+}
+```
+
+## Opções de configuração de segmento
+Os manipuladores de rota usam a mesma [configuração de segmento de rota](h/docs/app/api-reference/file-conventions/route-segment-config.md) que páginas e layouts.
+
+```ts
+// app/items/route.ts
+
+export const dynamic = 'auto'
+export const dynamicParams = true
+export const revalidate = false
+export const fetchCache = 'auto'
+export const runtime = 'nodejs'
+export const preferredRegion = 'auto'
+```
+
+Consulte a [referência da API](/docs/app/api-reference/file-conventions/route-segment-config.md) para obter mais detalhes.
