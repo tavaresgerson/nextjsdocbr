@@ -52,8 +52,8 @@ Para aproveitar ao máximo nossos documentos, é recomendável que você tenha u
     * [Manipulação de erros](/docs/app/building-your-application/routing/error-handling.md)
     * [Rotas Paralelas](/docs/app/building-your-application/routing/parallel-routes.md)
     * [Interceptando Rotas](/docs/app/building-your-application/routing/intercepting-routes.md)
-    * Route Handlers
-    * Middleware
+    * [Manipuladores de rota](/docs/app/building-your-application/routing/route-handlers.md)
+    * [Middleware](/docs/app/building-your-application/routing/middleware.md)
     * Project Organization
     * Internationalization
   * Rendering
