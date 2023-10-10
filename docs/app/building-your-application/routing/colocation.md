@@ -4,9 +4,9 @@ Além das convenções de roteamento de pastas e arquivos, Next.js não tem opin
 
 Esta página compartilha o comportamento padrão e os recursos que você pode usar para organizar seu projeto.
 
-* [Colocação segura por padrão](colocacao-segura-por-padrao)
-* Recursos de organização do projeto
-* Estratégias de organização do projeto
+* [Colocação segura por padrão](#coloca%C3%A7%C3%A3o-segura-por-padr%C3%A3o)
+* [Recursos de organização do projeto](#recursos-de-organiza%C3%A7%C3%A3o-do-projeto)
+* [Estratégias de organização do projeto](#estrat%C3%A9gias-de-organiza%C3%A7%C3%A3o-do-projeto)
 
 ## Colocação segura por padrão
 No diretório do aplicativo, a hierarquia de pastas aninhadas define a estrutura da rota.
