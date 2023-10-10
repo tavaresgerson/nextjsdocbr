@@ -54,7 +54,7 @@ Para aproveitar ao máximo nossos documentos, é recomendável que você tenha u
     * [Interceptando Rotas](/docs/app/building-your-application/routing/intercepting-routes.md)
     * [Manipuladores de rota](/docs/app/building-your-application/routing/route-handlers.md)
     * [Middleware](/docs/app/building-your-application/routing/middleware.md)
-    * Project Organization
+    * [Organização do Projeto](/docs/app/building-your-application/routing/colocation.md)
     * Internationalization
   * Rendering
     * Static and Dynamic
