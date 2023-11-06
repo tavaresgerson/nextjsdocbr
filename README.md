@@ -55,7 +55,7 @@ Para aproveitar ao máximo nossos documentos, é recomendável que você tenha u
     * [Manipuladores de rota](/docs/app/building-your-application/routing/route-handlers.md)
     * [Middleware](/docs/app/building-your-application/routing/middleware.md)
     * [Organização do Projeto](/docs/app/building-your-application/routing/colocation.md)
-    * Internationalization
+    * [Internacionalização](/docs/app/building-your-application/routing/internationalization.md)
   * Rendering
     * Static and Dynamic
     * Edge and Node.js Runtimes
