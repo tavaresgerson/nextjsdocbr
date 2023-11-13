@@ -56,8 +56,10 @@ Para aproveitar ao máximo nossos documentos, é recomendável que você tenha u
     * [Middleware](/docs/app/building-your-application/routing/middleware.md)
     * [Organização do Projeto](/docs/app/building-your-application/routing/colocation.md)
     * [Internacionalização](/docs/app/building-your-application/routing/internationalization.md)
-  * Rendering
-    * Static and Dynamic
+  * [Renderização](/docs/app/building-your-application/rendering.md)
+    * [Componentes de servidor](/docs/app/building-your-application/rendering/server-components.md)
+    * Client Components
+    * Server and Client Composition Patterns
     * Edge and Node.js Runtimes
   * Data Fetching
     * Fetching
